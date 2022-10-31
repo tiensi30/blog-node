@@ -1,5 +1,5 @@
 function newsController(req, res) {
-   res.render('blog');
+    res.render('blog');
 }
 
-module.exports = newsController
+module.exports = newsController;

@@ -17,12 +17,23 @@
     "url": "https://github.com/tiensi30/blog-node/issues"
   },
   "homepage": "https://github.com/tiensi30/blog-node#readme",
+  "lint-staged": {
+    "\"src/**/*.{js,json,scss}\"": "prettier --single-quote --tab-width 4 --trailing-comma all --write"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "dependencies": {
     "express": "^4.18.2",
     "express-handlebars": "^6.0.6"
   },
   "devDependencies": {
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
     "morgan": "^1.10.0",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "prettier": "^2.7.1"
   }
 }

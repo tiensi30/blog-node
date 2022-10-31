@@ -1,15 +1,11 @@
 module.exports = {
-   home: function(req, res){
-      res.render('home');
-   },
-   search: function(req, res){
-      res.render('search');
-   }
-}
-
-
-
-
+    home: function (req, res) {
+        res.render('home');
+    },
+    search: function (req, res) {
+        res.render('search');
+    },
+};
 
 // app.get('/', (req, res) => {
 //    res.render('home');
@@ -27,5 +23,3 @@ module.exports = {
 //    // console.log(req.body);
 //    res.render('search');
 //  })
-
-
