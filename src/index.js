@@ -18,8 +18,8 @@ const handlebars = require('express-handlebars');
                 //static link
                 app.use(express.static(path.join(__dirname, 'public')));
 
-                //logger http
-                app.use(morgan('tiny'));
+                   //logger http
+                       app.use(morgan('tiny'));
 
                 //express handlebars
                 app.engine('handlebars', handlebars.engine());

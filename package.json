@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/tiensi30/blog-node#readme",
   "lint-staged": {
-    "\"src/**/*.{js,json,scss}\"": "prettier --single-quote --tab-width 4 --trailing-comma all --write"
+    "src/**/*.{js,json,scss}": "prettier --single-quote --tab-width 4 --trailing-comma all --write"
   },
   "husky": {
     "hooks": {
