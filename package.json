@@ -4,6 +4,7 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
+    "beautiful": "lint-staged",
     "start": "nodemon --inspect src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,7 +19,7 @@
   },
   "homepage": "https://github.com/tiensi30/blog-node#readme",
   "lint-staged": {
-    "src/**/*.{js,json,scss}": "prettier --single-quote --tab-width 4 --trailing-comma all --write"
+    "*.js": "prettier --single-quote --tab-width 4 --trailing-comma all --write"
   },
   "husky": {
     "hooks": {

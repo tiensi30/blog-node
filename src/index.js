@@ -9,8 +9,8 @@ const handlebars = require('express-handlebars');
 
                 //lấy dữ liệu từ post phải sd urlencoded
                 app.use(
-                    express.urlencoded({
-                        extended: true,
+                          express.urlencoded({
+                               extended: true,
                     }),
                 );
                 app.use(express.json());
@@ -23,7 +23,7 @@ const handlebars = require('express-handlebars');
 
                 //express handlebars
                 app.engine('handlebars', handlebars.engine());
-app.set('view engine', 'handlebars');
+app.set("view engine", 'handlebars');
 app.set('views', path.join(__dirname, 'component/views'));
 
 route(app);
