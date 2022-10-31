@@ -6,7 +6,8 @@
   "scripts": {
     "beautiful": "lint-staged",
     "start": "nodemon --inspect src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -19,7 +20,7 @@
   },
   "homepage": "https://github.com/tiensi30/blog-node#readme",
   "lint-staged": {
-    "*.js": "prettier --single-quote --tab-width 4 --trailing-comma all --write"
+    "src/**/*.{js,json,scss}": ["eslint", "prettier prettier --single-quote --tab-width 4 --trailing-comma all --write"] 
   },
   "husky": {
     "hooks": {
