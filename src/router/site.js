@@ -1,10 +1,10 @@
-var express = require('express');
+var express = require("express");
 
 var router = express.Router();
 
-const { home, search } = require('../controller/siteController');
+const { home, search } = require("../controller/siteController");
 
-router.use('/search', search);
-router.use('/', home);
+router.get("/search", search);
+router.get("/", home);
 
 module.exports = router;

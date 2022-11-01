@@ -6,6 +6,10 @@ var morgan = require("morgan");
 const handlebars = require("express-handlebars");
 
 const route = require("./router");
+const db = require("./config/db");
+
+//database
+db.connect();
 
 //lấy dữ liệu từ post phải sd urlencoded
 app.use(
@@ -24,7 +28,7 @@ app.use(morgan("tiny"));
 //express handlebars
 app.engine("handlebars", handlebars.engine());
 app.set("view engine", "handlebars");
-app.set("views", path.join(__dirname, "component/views"));
+app.set("views", path.join(__dirname, "component", "views"));
 
 route(app);
 

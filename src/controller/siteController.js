@@ -1,10 +1,19 @@
+const Course = require("../models/Course");
+const { mutipleMongooseToObject } = require("../until/mongosees");
+
 module.exports = {
-    home: function (req, res) {
-        res.render('home');
-    },
-    search: function (req, res) {
-        res.render('search');
-    },
+  home: function (req, res, next) {
+    Course.find({})
+      .then((Course) => {
+        res.render("home", {
+          Course: mutipleMongooseToObject(Course),
+        });
+      })
+      .catch(next);
+  },
+  search: function (req, res) {
+    res.render("search");
+  },
 };
 
 // app.get('/', (req, res) => {
